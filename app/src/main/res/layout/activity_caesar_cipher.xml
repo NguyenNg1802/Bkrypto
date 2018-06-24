@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context="com.example.manhl_000.bkrypto.Cipher.CaesarCipher">
+
+    <github.hellocsl.cursorwheel.CursorWheelLayout
+        android:id="@+id/wheel_text"
+        android:layout_width="330dp"
+        android:layout_height="330dp"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        app:wheelCenterRadio="1.2"
+        app:wheelCursorHeight="0dip"
+        app:wheelFlingValue="0"
+        app:wheelItemRotateMode="inward"
+        app:wheelPaddingRadio="0.82"
+        app:wheelSelectedAngle="90">
+
+        <ImageView
+            android:id="@id/id_wheel_menu_center_item"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:src="@drawable/nen" />
+    </github.hellocsl.cursorwheel.CursorWheelLayout>
+
+    <EditText
+        android:id="@+id/textView"
+        android:layout_width="350dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/wheel_text"
+        android:layout_marginTop="10dp"
+        android:hint="@string/Plaintext"
+        android:textSize="22sp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="@drawable/input"
+        />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/harryp"
+        android:text="@string/Caesar"
+        android:textSize="70sp" />
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/harryp"
+        android:text="@string/Caesar"
+        android:textSize="70sp"
+        android:textColor="#ffe0bb"
+        />
+
+    <Button
+        android:id="@+id/decrypt_button"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_alignTop="@+id/encypt_button"
+        android:layout_alignEnd="@+id/textView"
+        android:fontFamily="@font/fs_aserif"
+        android:text="@string/Decrypt"
+        android:textSize="30sp"
+        android:textColor="#ffffff"
+        android:background="@drawable/button"/>
+
+    <Button
+        android:id="@+id/encypt_button"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/textView"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/fs_aserif"
+        android:text="@string/Encrypt"
+        android:textSize="30sp"
+        android:textColor="#ffffff"
+        android:background="@drawable/button"
+        />
+
+    <TextView
+        android:id="@+id/key"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/wheel_text"
+        android:layout_alignStart="@id/textView2"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="-20dp"
+        android:fontFamily="@font/fs_sicula"
+        android:text="@string/AX"
+        android:textSize="30sp"
+        android:textColor="#99000000"
+        />
+
+
+</RelativeLayout>

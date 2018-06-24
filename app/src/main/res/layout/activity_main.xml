@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="250dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="48dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/harryp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:shadowColor="#000000"
+        android:shadowDx="10"
+        android:shadowDy="10"
+        android:shadowRadius="10"
+        android:textColor="#ffe0bb"
+        android:textSize="100sp" />
+
+    <Button
+        android:id="@+id/decrypt"
+        android:layout_width="200dp"
+        android:layout_height="15dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:background="@drawable/button"
+        android:fontFamily="@font/fs_aserif"
+        android:text="@string/Decrypt"
+        android:textColor="#ffe0bb"
+        android:textSize="35sp"
+        android:onClick="inDecrypt"/>
+
+    <Button
+        android:id="@+id/tutorial"
+        android:layout_width="200dp"
+        android:layout_height="15dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="36dp"
+        android:layout_weight="1"
+        android:background="@drawable/button"
+        android:fontFamily="@font/fs_aserif"
+        android:text="@string/Tutorial"
+        android:textColor="#ffe0bb"
+        android:textSize="35sp"
+        android:onClick="in_tutorial"
+        />
+
+    <Button
+        android:id="@+id/solve_puzzle"
+        android:layout_width="200dp"
+        android:layout_height="15dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="36dp"
+        android:layout_weight="1"
+        android:background="@drawable/button"
+        android:fontFamily="@font/fs_aserif"
+        android:text="@string/Solve"
+        android:onClick="in_solve_puzzle"
+        android:textColor="#ffe0bb"
+        android:textSize="35sp" />
+
+    <Button
+        android:id="@+id/about"
+        android:layout_width="200dp"
+        android:layout_height="15dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="36dp"
+        android:layout_marginBottom="30dp"
+        android:layout_weight="1"
+        android:background="@drawable/button"
+        android:fontFamily="@font/fs_aserif"
+        android:text="@string/About"
+        android:onClick="in_about"
+        android:textColor="#ffe0bb"
+        android:textSize="35sp" />
+
+
+    <Button
+        android:id="@+id/music_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:textOff=""
+        android:textOn=""
+        android:layout_gravity="end"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+
+        android:background="@drawable/speaker_on"/>
+</LinearLayout>

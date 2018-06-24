@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_playfair"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context="com.example.manhl_000.bkrypto.Cipher.PlayfairActivity">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/harryp"
+        android:text="@string/Playfair"
+        android:textSize="70sp" />
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/harryp"
+        android:text="@string/Playfair"
+        android:textSize="70sp"
+        android:textColor="#ffe0bb"
+        />
+
+    <EditText
+        android:id="@+id/etPlaintext"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/etKey"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/input"
+        android:hint="@string/PlaintextOnly"
+        android:gravity="top"
+        android:textAlignment="center"
+        android:inputType="textMultiLine|textCapCharacters"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:paddingTop="10dp" />
+
+    <EditText
+        android:id="@+id/etKey"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/line1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-202dp"
+        android:background="@drawable/input"
+        android:gravity="top"
+        android:textAlignment="center"
+        android:hint="@string/KeyOnly"
+        android:inputType="textCapCharacters|textMultiLine"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:paddingTop="10dp" />
+
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_width="357dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="207dp"
+        android:orientation="horizontal"
+        android:weightSum="9">
+
+
+        <Button
+            android:id="@+id/EncryptBTN"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:background="@drawable/button"
+            android:fontFamily="@font/fs_aserif"
+            android:text="@string/Encrypt"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/decryptBTN"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="50dp"
+            android:background="@drawable/button"
+            android:fontFamily="@font/fs_aserif"
+            android:text="@string/Decrypt"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+
+    </LinearLayout>
+
+    <ToggleButton
+        android:id="@+id/MtarixTogBTN"
+        android:layout_width="76dp"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button"
+        android:fontFamily="@font/fs_aserif"
+        android:text="@string/Show"
+        android:textColor="@color/white"
+        android:textOff="@string/Show"
+        android:textOn="@string/Hide"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/MtarixTogBTN"
+        android:layout_alignParentStart="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:paddingTop="10dp"
+            android:text="@string/Result"
+            android:fontFamily="@font/bali"
+            android:textAlignment="center"
+            android:textColor="#4e1301"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/tvCipherText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/fs_sicula"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textIsSelectable="true"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/tvKeyPlain"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:fontFamily="@font/fs_sicula"
+            android:textIsSelectable="true"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvMatrix"
+            android:layout_width="match_parent"
+            android:layout_height="147dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textIsSelectable="true"
+            android:textSize="18sp" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

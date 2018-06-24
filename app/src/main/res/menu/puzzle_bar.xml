@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.manhl_000.bkrypto.solve_puzzle">
+
+    <item
+        android:title="Done"
+        android:icon="@drawable/done"
+        android:id="@+id/done"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:title="menu"
+        android:icon="@drawable/menu"
+        app:showAsAction="always"
+        >
+
+        <menu>
+            <item
+                android:id="@+id/puzzle_list"
+                android:title="Puzzle"
+                android:icon="@drawable/list"
+                app:showAsAction="never"/>
+            <item
+                android:title="Hint"
+                android:icon="@drawable/light"
+                android:id="@+id/hint"
+                app:showAsAction="never"
+                />
+
+            <item
+                android:title="Reset"
+                android:icon="@drawable/restart"
+                android:id="@+id/reset"
+                app:showAsAction="never"
+                />
+
+            <item
+                android:title="History"
+                android:icon="@drawable/history"
+                android:id="@+id/history"
+                app:showAsAction="never"
+                />
+            <item
+                android:title="Tutorial"
+                android:icon="@drawable/tut"
+                android:id="@+id/puzzle_tutorial"
+                app:showAsAction="never"
+                />
+
+        </menu>
+
+
+    </item>
+
+
+</menu>

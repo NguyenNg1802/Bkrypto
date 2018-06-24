@@ -1,0 +1,29 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.manhl_000.bkrypto.History">
+
+    <!--<item-->
+        <!--android:id="@+id/history_help"-->
+        <!--android:icon="@drawable/help"-->
+        <!--android:orderInCategory="100"-->
+        <!--android:title="Help"-->
+        <!--app:showAsAction="never" />-->
+
+    <item
+        android:title="menu"
+        android:icon="@drawable/menu"
+        app:showAsAction="always"
+        >
+
+    <menu>
+        <item
+            android:id="@+id/help_in_history"
+            android:icon="@drawable/help"
+            android:orderInCategory="100"
+            android:title="Help"
+            app:showAsAction="never" />
+    </menu>
+    </item>
+
+</menu>

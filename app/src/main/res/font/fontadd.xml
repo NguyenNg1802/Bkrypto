@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:android="http://schemas.android.com/apk/res/android">
+    <font
+        android:font="@font/harryp"/>
+    <font
+        android:font="@font/bali"/>
+    <font
+        android:font="@font/fs_aserif"/>
+    <font
+        android:font="@font/svn_merge"/>
+    <font
+        android:font="@font/icielpanton_light"/>
+    <font
+        android:font="@font/icielpanton_black"/>
+    <font
+        android:font="@font/fs_habara"/>
+    <font
+        android:font="@font/fs_sicula"/>
+</font-family>
