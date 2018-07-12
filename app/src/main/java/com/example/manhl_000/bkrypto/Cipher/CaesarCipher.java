@@ -77,11 +77,47 @@ public class CaesarCipher extends AppCompatActivity implements CursorWheelLayout
                     Toast msg = Toast.makeText(getBaseContext(), "INPUT TEXT FIRST!", Toast.LENGTH_LONG);
                     msg.setGravity(Gravity.CENTER, msg.getXOffset() / 2, msg.getYOffset() / 2 + 350);
                     msg.show();
-                } else
-                    showResult(Decrypt());
+                } else {
+                    askForDecrypt();
+                }
             }
         });
 
+    }
+
+    public void askForDecrypt(){
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+        // khởi tạo dialog
+
+        final View dialogView = getLayoutInflater().inflate(R.layout.decrypt_type,null);
+        alertDialogBuilder.setView(dialogView);
+        Button solve1 = dialogView.findViewById(R.id.solve1);
+        Button solve26 = dialogView.findViewById(R.id.solve26);
+
+        final AlertDialog alertDialog = alertDialogBuilder.create();
+
+        solve1.setOnClickListener( new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                showResult(Decrypt(1));
+                alertDialog.dismiss();
+            }
+        });
+
+        solve26.setOnClickListener( new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                showResult(Decrypt(0));
+                alertDialog.dismiss();
+            }
+        });
+
+
+
+        // tạo dialog
+        alertDialog.show();
     }
 
     public void showResult(String msg){
@@ -100,26 +136,39 @@ public class CaesarCipher extends AppCompatActivity implements CursorWheelLayout
         alertDialog.show();
     }
 
-    public String Decrypt() {
+    public String Decrypt(int numberOfResult) {
         loadData();
         String res = "";
 
-
-        for (int j = 0; j < 26; j++) {
-
-            char[] tmp = new char[input.length];
-            for (int k = 0;  k < input.length; k++)
-                tmp[k] = input[k];
-            for (int i = 0; i < tmp.length; i++)
-                if (tmp[i] < 65 || tmp[i] > 90)
-                    tmp[i] = 32;
-                else if (tmp[i] + j > 90)
-                    tmp[i] = (char) (tmp[i] + j - 26);
+        if (numberOfResult == 1) {
+            loadData();
+            diff = -diff;
+            /*for (int i = 0; i < input.length; i++)
+                if (input[i] < 65 || input[i] > 91)
+                    input[i] = 32;
+                else if (input[i] - diff >= 'A')
+                    input[i] = (char) (input[i] - diff);
                 else
-                    tmp[i] = (char) (tmp[i] + j);
+                    input[i] = (char) (input[i] - diff + 26);*/
 
-            res = res + "#" + (j+1) + " A = " + (char)(65+j) + ": " + String.copyValueOf(tmp) + "\n";
+            return Encrypt();
         }
+        else
+            for (int j = 0; j < 26; j++) {
+
+                char[] tmp = new char[input.length];
+                for (int k = 0; k < input.length; k++)
+                    tmp[k] = input[k];
+                for (int i = 0; i < tmp.length; i++)
+                    if (tmp[i] < 65 || tmp[i] > 90)
+                        tmp[i] = 32;
+                    else if (tmp[i] + j > 90)
+                        tmp[i] = (char) (tmp[i] + j - 26);
+                    else
+                        tmp[i] = (char) (tmp[i] + j);
+
+                res = res + "#" + (j + 1) + " A = " + (char) (65 - j + 26) + ": " + String.copyValueOf(tmp) + "\n";
+            }
 
         return res;
     }

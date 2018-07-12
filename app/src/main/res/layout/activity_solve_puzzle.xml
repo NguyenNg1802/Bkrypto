@@ -36,7 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
         android:fontFamily="@font/bali"
-        android:text="Plain text:"
+        android:text="Cipher text:"
         android:textColor="#4e1301"
         android:textSize="40sp" />
 
